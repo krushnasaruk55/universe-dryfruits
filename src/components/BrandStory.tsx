@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Sparkles } from "lucide-react";
+import { getAssetPath } from "../utils/assets";
 
 export const BrandStory: React.FC = () => {
   return (
@@ -144,7 +145,7 @@ export const BrandStory: React.FC = () => {
               }}
             >
               <img
-                src="/images/brand_story.jpg"
+                src={getAssetPath("/images/brand_story.jpg")}
                 alt="Art-directed dark slate culinary still life with walnuts, pistachios, almonds, and burnished brass scoop"
                 loading="eager"
                 decoding="async"

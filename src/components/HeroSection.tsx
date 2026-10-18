@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowDownRight, Compass, Sparkles } from "lucide-react";
+import { getAssetPath } from "../utils/assets";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -212,7 +213,7 @@ export const HeroSection: React.FC = () => {
               }}
             >
               <img
-                src="/images/hero.jpg"
+                src={getAssetPath("/images/hero.jpg")}
                 alt="Dominant still life composition of raw Mamra almonds, cashews, pistachios, walnuts and Medjool dates on artisanal ceramic plate"
                 loading="eager"
                 decoding="async"
@@ -260,7 +261,7 @@ export const HeroSection: React.FC = () => {
                 }}
               >
                 <img
-                  src="/images/macro_shells.jpg"
+                  src={getAssetPath("/images/macro_shells.jpg")}
                   alt="Extreme close-up macro texture of cracked pistachio shells and walnut ridges on raw linen"
                   loading="eager"
                   decoding="async"

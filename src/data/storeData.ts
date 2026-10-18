@@ -1,3 +1,5 @@
+import { getAssetPath } from "../utils/assets";
+
 export interface BusinessConfig {
   name: string;
   category: string;
@@ -110,7 +112,7 @@ export const sampleProducts: ProductItem[] = [
     shortDescription: "Distinctive boat-shaped almonds with high natural oil content and crisp bite.",
     description:
       "Recognized by their pointed shape and rich earthy crunch. Ideal for morning soaking, snacking, or culinary confectionery.",
-    image: "/images/almonds.jpg",
+    image: getAssetPath("/images/almonds.jpg"),
     available: true,
     availableSizes: [
       { weight: "250g", samplePrice: 650 },
@@ -133,7 +135,7 @@ export const sampleProducts: ProductItem[] = [
     shortDescription: "Creamy, whole grade-W180 cashews with a natural buttery smoothness.",
     description:
       "Hand-graded whole cashew kernels prized for their uniform crescent curve and tender, melt-in-mouth mouthfeel.",
-    image: "/images/cashews.jpg",
+    image: getAssetPath("/images/cashews.jpg"),
     available: true,
     availableSizes: [
       { weight: "250g", samplePrice: 380 },
@@ -156,7 +158,7 @@ export const sampleProducts: ProductItem[] = [
     shortDescription: "Naturally split roasted pistachios in shell with sea-salt seasoning.",
     description:
       "Naturally open shells revealing vibrant emerald and purple-tinged kernels roasted to develop a clean savory aroma.",
-    image: "/images/pistachios.jpg",
+    image: getAssetPath("/images/pistachios.jpg"),
     available: true,
     availableSizes: [
       { weight: "250g", samplePrice: 420 },
@@ -179,7 +181,7 @@ export const sampleProducts: ProductItem[] = [
     shortDescription: "Pristine amber walnut halves with intact natural folds and mild finish.",
     description:
       "Carefully de-shelled golden walnut halves retaining their fragile delicate structure without excessive bitterness.",
-    image: "/images/walnuts.jpg",
+    image: getAssetPath("/images/walnuts.jpg"),
     available: true,
     availableSizes: [
       { weight: "250g", samplePrice: 450 },
@@ -202,7 +204,7 @@ export const sampleProducts: ProductItem[] = [
     shortDescription: "Plump, soft amber dates known for a rich caramel-like sweetness.",
     description:
       "Large, soft-fleshed dates with naturally wrinkled mahogany skin and an unctuous, honey-like texture.",
-    image: "/images/dates.jpg",
+    image: getAssetPath("/images/dates.jpg"),
     available: true,
     availableSizes: [
       { weight: "500g", samplePrice: 690 },
@@ -224,7 +226,7 @@ export const sampleProducts: ProductItem[] = [
     shortDescription: "Slender, sun-dried green-golden raisins with a bright, balanced tartness.",
     description:
       "Naturally sun-dried elongated seedless raisins offering an energetic balance between gentle sweetness and citrus tang.",
-    image: "/images/raisins.jpg",
+    image: getAssetPath("/images/raisins.jpg"),
     available: true,
     availableSizes: [
       { weight: "250g", samplePrice: 220 },
@@ -258,7 +260,7 @@ export const productCategories: CategoryItem[] = [
     name: "Almonds",
     tagline: "Mamra & California Kernels",
     description: "Cold-stored, intact skins with preserved natural oils and robust crunch.",
-    image: "/images/almonds.jpg",
+    image: getAssetPath("/images/almonds.jpg"),
     accentNote: "Rich in vitamin E & natural oils",
     sampleItemCount: 4,
   },
@@ -267,7 +269,7 @@ export const productCategories: CategoryItem[] = [
     name: "Cashews",
     tagline: "Grade W180 to W320",
     description: "Whole ivory crescents hand-selected for uniform size and creamy bite.",
-    image: "/images/cashews.jpg",
+    image: getAssetPath("/images/cashews.jpg"),
     accentNote: "Naturally sweet and tender",
     sampleItemCount: 3,
   },
@@ -276,7 +278,7 @@ export const productCategories: CategoryItem[] = [
     name: "Pistachios",
     tagline: "Roasted & In-Shell Greens",
     description: "Emerald kernels naturally cracked on the tree, dry-roasted with sea salt.",
-    image: "/images/pistachios.jpg",
+    image: getAssetPath("/images/pistachios.jpg"),
     accentNote: "Vibrant color & savory crunch",
     sampleItemCount: 3,
   },
@@ -285,7 +287,7 @@ export const productCategories: CategoryItem[] = [
     name: "Walnuts",
     tagline: "Whole Amber Halves",
     description: "Light-amber halved kernels carefully shelled to prevent breakage.",
-    image: "/images/walnuts.jpg",
+    image: getAssetPath("/images/walnuts.jpg"),
     accentNote: "Delicate natural omega richness",
     sampleItemCount: 2,
   },
@@ -294,7 +296,7 @@ export const productCategories: CategoryItem[] = [
     name: "Dates",
     tagline: "Medjool, Kimia & Mabroom",
     description: "Plump, moisture-balanced dates celebrating deep caramel flavors.",
-    image: "/images/dates.jpg",
+    image: getAssetPath("/images/dates.jpg"),
     accentNote: "Natural caramel sweetness",
     sampleItemCount: 4,
   },
@@ -303,7 +305,7 @@ export const productCategories: CategoryItem[] = [
     name: "Raisins",
     tagline: "Afghan Green & Black Munakka",
     description: "Sun-dried long Kishmish and seeded Munakka with bright acidity.",
-    image: "/images/raisins.jpg",
+    image: getAssetPath("/images/raisins.jpg"),
     accentNote: "Sun-cured fruit balance",
     sampleItemCount: 3,
   },

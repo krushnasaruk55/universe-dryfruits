@@ -1,5 +1,6 @@
 import React from "react";
 import { Gift, ArrowRight } from "lucide-react";
+import { getAssetPath } from "../utils/assets";
 
 interface GiftCollectionProps {
   onOpenEnquiry: () => void;
@@ -64,7 +65,7 @@ export const GiftCollection: React.FC<GiftCollectionProps> = ({ onOpenEnquiry })
               }}
             >
               <img
-                src="/images/gift_box.jpg"
+                src={getAssetPath("/images/gift_box.jpg")}
                 alt="Artisanal dry fruit wooden chest with whole almonds, pistachios, cashews, and Medjool dates tied with emerald ribbon"
                 loading="eager"
                 decoding="async"

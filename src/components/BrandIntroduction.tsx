@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { getAssetPath } from "../utils/assets";
 
 export const BrandIntroduction: React.FC = () => {
   return (
@@ -124,7 +125,7 @@ export const BrandIntroduction: React.FC = () => {
               }}
             >
               <img
-                src="/images/pantry_lifestyle.jpg"
+                src={getAssetPath("/images/pantry_lifestyle.jpg")}
                 alt="Minimalist artisanal dry fruit pantry with ceramic jars of walnuts, almonds, and dried apricots in natural sunlight"
                 loading="eager"
                 decoding="async"
@@ -155,7 +156,7 @@ export const BrandIntroduction: React.FC = () => {
                 }}
               >
                 <img
-                  src="/images/store_boutique.jpg"
+                  src={getAssetPath("/images/store_boutique.jpg")}
                   alt="Clear apothecary glass display jars with whole almonds and walnuts in store"
                   loading="eager"
                   decoding="async"
