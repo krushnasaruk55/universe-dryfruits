@@ -1,0 +1,441 @@
+/* ============================================================
+   UNIVERSE DRYFRUITS — SWISS EDITORIAL DESIGN & MOTION SYSTEM
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brand Color Tokens */
+  --bg-ivory: #F6F1E8;
+  --bg-ivory-warm: #F4EFE5;
+  --bg-pistachio: #E8E5D4;
+  --bg-sand: #ECE7DC;
+  --brand-forest: #244734;
+  --brand-forest-dark: #193224;
+  --brand-forest-light: #2D5841;
+  --accent-gold: #C6A568;
+  --accent-gold-soft: #D7BE8A;
+  --accent-gold-muted: #8E7448;
+  --text-cocoa: #342820;
+  --text-cocoa-muted: #64554B;
+  --text-cocoa-light: #8E7D72;
+  --dark-espresso: #211C18;
+  --dark-espresso-card: #28221D;
+  --text-ivory: #F6F1E8;
+  --text-ivory-muted: #D8D2C5;
+
+  /* Swiss Hairline Borders */
+  --border-swiss: rgba(52, 40, 32, 0.15);
+  --border-subtle: rgba(52, 40, 32, 0.10);
+  --border-strong: rgba(52, 40, 32, 0.32);
+  --border-dark-subtle: rgba(246, 241, 232, 0.14);
+  --border-dark-strong: rgba(246, 241, 232, 0.28);
+  --border-gold: rgba(198, 165, 104, 0.38);
+
+  /* Typography Stacks */
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typographic Scales (Clamp) */
+  --fs-hero: clamp(3.2rem, 7.5vw, 6.75rem);
+  --fs-h1: clamp(2.35rem, 5vw, 4.5rem);
+  --fs-h2: clamp(1.85rem, 3.6vw, 3rem);
+  --fs-h3: clamp(1.35rem, 2.4vw, 1.85rem);
+  --fs-body-lg: clamp(1.05rem, 1.4vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-body-sm: 0.875rem;
+  --fs-caption: 0.75rem;
+  --fs-micro: 0.65rem;
+
+  /* Spacing Scale */
+  --container-max: 1400px;
+  --container-pad: clamp(1.25rem, 4.5vw, 3.5rem);
+
+  /* Swiss Motion Tokens */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-micro: 180ms;
+  --t-normal: 340ms;
+  --t-reveal: 700ms;
+  --t-slow: 1000ms;
+}
+
+/* Reset & Basics */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-ivory);
+  color: var(--text-cocoa);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--bg-ivory);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Swiss Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.eyebrow {
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--text-cocoa-muted);
+}
+
+.eyebrow-gold {
+  color: var(--accent-gold);
+  letter-spacing: 0.2em;
+}
+
+.swiss-numeral {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  opacity: 0.55;
+  font-size: 0.8125rem;
+}
+
+/* Containers & Grids */
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+.section-pad {
+  padding-top: clamp(4.5rem, 8vw, 8rem);
+  padding-bottom: clamp(4.5rem, 8vw, 8rem);
+}
+
+.section-pad-sm {
+  padding-top: clamp(3rem, 5vw, 5rem);
+  padding-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+/* Fine Swiss Hairline Divider */
+.hairline {
+  height: 1px;
+  background-color: var(--border-swiss);
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.hairline-dark {
+  background-color: var(--border-dark-subtle);
+}
+
+/* Buttons & Links */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--brand-forest);
+  color: var(--bg-ivory);
+  padding: 0.95rem 2.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  border: 1px solid var(--brand-forest);
+  border-radius: 2px;
+  transition: all var(--t-normal) var(--ease-editorial);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-forest-dark);
+  border-color: var(--brand-forest-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(36, 71, 52, 0.2);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 3px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: transparent;
+  color: var(--text-cocoa);
+  padding: 0.95rem 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  transition: all var(--t-normal) var(--ease-editorial);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(52, 40, 32, 0.05);
+  border-color: var(--text-cocoa);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 3px;
+}
+
+.link-editorial {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color var(--t-micro) ease;
+}
+
+.link-editorial::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform-origin: right;
+  transform: scaleX(0.35);
+  transition: transform var(--t-normal) var(--ease-editorial);
+}
+
+.link-editorial:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Swiss Badges */
+.badge-concept {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  border-radius: 2px;
+  background-color: rgba(198, 165, 104, 0.15);
+  color: var(--accent-gold-muted);
+  border: 1px solid rgba(198, 165, 104, 0.3);
+}
+
+.badge-dark {
+  background-color: rgba(246, 241, 232, 0.08);
+  color: var(--accent-gold-soft);
+  border-color: rgba(198, 165, 104, 0.25);
+}
+
+/* ============================================================
+   MOTION & REVEAL SYSTEM
+   ============================================================ */
+
+/* Image Frame with Mask Reveal */
+.editorial-img-frame {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-pistachio);
+}
+
+.editorial-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-slow) var(--ease-editorial);
+}
+
+.editorial-img-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* Scroll Reveal Triggers */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity var(--t-reveal) var(--ease-editorial), transform var(--t-reveal) var(--ease-editorial);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mask Clip Reveal */
+.reveal-mask {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.9s var(--ease-editorial);
+}
+
+.reveal-mask.is-revealed {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Headline Reveal Lines */
+.reveal-line {
+  display: block;
+  overflow: hidden;
+}
+
+.reveal-line > span {
+  display: block;
+  transform: translateY(105%);
+  opacity: 0;
+  animation: revealUp 0.85s var(--ease-editorial) forwards;
+}
+
+.reveal-line:nth-child(1) > span { animation-delay: 0.08s; }
+.reveal-line:nth-child(2) > span { animation-delay: 0.22s; }
+.reveal-line:nth-child(3) > span { animation-delay: 0.36s; }
+
+@keyframes revealUp {
+  from {
+    transform: translateY(105%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Parallax subtle floating effect */
+.float-subtle {
+  transition: transform 0.4s var(--ease-editorial);
+}
+
+/* Drawers & Modals */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(33, 28, 24, 0.65);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-normal) var(--ease-editorial);
+}
+
+.drawer-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(500px, 94vw);
+  background-color: var(--bg-ivory);
+  box-shadow: -15px 0 45px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--t-normal) var(--ease-editorial);
+}
+
+.drawer-backdrop.active .drawer-panel {
+  transform: translateX(0);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(33, 28, 24, 0.72);
+  backdrop-filter: blur(6px);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-normal) var(--ease-editorial);
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  width: min(720px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--bg-ivory);
+  border-radius: 3px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-swiss);
+  transform: scale(0.95) translateY(14px);
+  transition: transform var(--t-normal) var(--ease-editorial);
+}
+
+.modal-backdrop.active .modal-card {
+  transform: scale(1) translateY(0);
+}
+
+/* Reduced Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .reveal-mask {
+    clip-path: none !important;
+  }
+}
